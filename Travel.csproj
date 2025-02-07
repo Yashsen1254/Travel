@@ -1,0 +1,842 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0FDE809F-6DE2-430E-B8ED-A43861A1372F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Travel</RootNamespace>
+    <AssemblyName>Travel</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Pages\Admin\add.aspx" />
+    <Content Include="Admin\Pages\Admin\index.aspx" />
+    <Content Include="Admin\Pages\Admin\update.aspx" />
+    <Content Include="Admin\Pages\assets\cdnjs.cloudflare.com\ajax\libs\highlight.js\9.12.0\highlight.min.js" />
+    <Content Include="Admin\Pages\assets\cdnjs.cloudflare.com\ajax\libs\highlight.js\9.12.0\styles\monokai-sublime.min.css" />
+    <Content Include="Admin\Pages\assets\cdnjs.cloudflare.com\ajax\libs\jquery\3.6.0\jquery.min.js" />
+    <Content Include="Admin\Pages\assets\css\img\star-empty.html" />
+    <Content Include="Admin\Pages\assets\css\img\star-full.html" />
+    <Content Include="Admin\Pages\assets\css\landing.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\animate.min.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\autoFill.bootstrap5.min.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\bootstrap-slider.min.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\bootstrap-switch-button.min.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\buttons.bootstrap5.min.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\croppr.min.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\dataTables.bootstrap5.min.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\datepicker-bs5.min.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\dragula.min.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\dropzone.min.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\fixedColumns.bootstrap5.min.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\fixedHeader.bootstrap5.min.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\flatpickr.min.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\introjs.min.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\jsvectormap.min.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\keyTable.bootstrap5.min.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\notifier.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\nouislider.min.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\prism-coy.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\quill.bubble.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\quill.core.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\quill.snow.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\responsive.bootstrap5.min.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\rowReorder.bootstrap5.min.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\scroller.bootstrap5.min.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\select.bootstrap5.min.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\simplemde.min.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\star-rating.min.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\style.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\swiper-bundle.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\tiny-slider.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\uppy.min.css" />
+    <Content Include="Admin\Pages\assets\css\plugins\vanillatree.css" />
+    <Content Include="Admin\Pages\assets\css\style-preset.css" />
+    <Content Include="Admin\Pages\assets\css\style.css" />
+    <Content Include="Admin\Pages\assets\css\uikit.css" />
+    <Content Include="Admin\Pages\assets\fonts\feather.css" />
+    <Content Include="Admin\Pages\assets\fonts\feather\feathere8ab.svg" />
+    <Content Include="Admin\Pages\assets\fonts\fontawesome.css" />
+    <Content Include="Admin\Pages\assets\fonts\fontawesome\fa-brands-400.html" />
+    <Content Include="Admin\Pages\assets\fonts\fontawesome\fa-brands-400.svg" />
+    <Content Include="Admin\Pages\assets\fonts\fontawesome\fa-regular-400.html" />
+    <Content Include="Admin\Pages\assets\fonts\fontawesome\fa-regular-400.svg" />
+    <Content Include="Admin\Pages\assets\fonts\fontawesome\fa-solid-900.html" />
+    <Content Include="Admin\Pages\assets\fonts\fontawesome\fa-solid-900.svg" />
+    <Content Include="Admin\Pages\assets\fonts\material.css" />
+    <Content Include="Admin\Pages\assets\fonts\material\material.html" />
+    <Content Include="Admin\Pages\assets\fonts\phosphor\duotone\Phosphor-Duotone.svg" />
+    <Content Include="Admin\Pages\assets\fonts\phosphor\duotone\style.css" />
+    <Content Include="Admin\Pages\assets\fonts\tabler-icons.min.css" />
+    <Content Include="Admin\Pages\assets\fonts\tabler\tabler-icons.html" />
+    <Content Include="Admin\Pages\assets\fonts\tabler\tabler-icons.svg" />
+    <Content Include="Admin\Pages\assets\images\admin\img-add-user.png" />
+    <Content Include="Admin\Pages\assets\images\admin\img-bootstrap.svg" />
+    <Content Include="Admin\Pages\assets\images\admin\img-bulb.svg" />
+    <Content Include="Admin\Pages\assets\images\admin\img-c.svg" />
+    <Content Include="Admin\Pages\assets\images\admin\img-course-1.png" />
+    <Content Include="Admin\Pages\assets\images\admin\img-course-2.png" />
+    <Content Include="Admin\Pages\assets\images\admin\img-course-3.png" />
+    <Content Include="Admin\Pages\assets\images\admin\img-course-4.png" />
+    <Content Include="Admin\Pages\assets\images\admin\img-course-5.png" />
+    <Content Include="Admin\Pages\assets\images\admin\img-course-6.png" />
+    <Content Include="Admin\Pages\assets\images\admin\img-course-7.png" />
+    <Content Include="Admin\Pages\assets\images\admin\img-course-8.png" />
+    <Content Include="Admin\Pages\assets\images\admin\img-domain.png" />
+    <Content Include="Admin\Pages\assets\images\admin\img-payment-1.png" />
+    <Content Include="Admin\Pages\assets\images\admin\img-payment-2.png" />
+    <Content Include="Admin\Pages\assets\images\admin\img-php.svg" />
+    <Content Include="Admin\Pages\assets\images\admin\img-star.png" />
+    <Content Include="Admin\Pages\assets\images\admin\img-ux.svg" />
+    <Content Include="Admin\Pages\assets\images\admin\img-web.svg" />
+    <Content Include="Admin\Pages\assets\images\admin\p1.jpg" />
+    <Content Include="Admin\Pages\assets\images\admin\p2.jpg" />
+    <Content Include="Admin\Pages\assets\images\admin\p3.jpg" />
+    <Content Include="Admin\Pages\assets\images\admin\p4.jpg" />
+    <Content Include="Admin\Pages\assets\images\admin\p5.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\card.png" />
+    <Content Include="Admin\Pages\assets\images\application\img-accout-alert.png" />
+    <Content Include="Admin\Pages\assets\images\application\img-accout-password-alert.png" />
+    <Content Include="Admin\Pages\assets\images\application\img-community-bg.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-coupon.png" />
+    <Content Include="Admin\Pages\assets\images\application\img-empty-mail.png" />
+    <Content Include="Admin\Pages\assets\images\application\img-gallery-1.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-gallery-2.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-gallery-3.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-gallery-4.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-gallery-5.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-gallery-6.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-gallery-7.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-gallery-8.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-mastercard.svg" />
+    <Content Include="Admin\Pages\assets\images\application\img-pay-card-bg.png" />
+    <Content Include="Admin\Pages\assets\images\application\img-post-1.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-post-2.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-post-3.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-post-4.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-post-5.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-post-6.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-prod-1.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-prod-2.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-prod-3.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-prod-4.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-prod-5.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-prod-6.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-prod-7.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-prod-8.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-prod-9.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-prod-brand-1.png" />
+    <Content Include="Admin\Pages\assets\images\application\img-prod-brand-2.png" />
+    <Content Include="Admin\Pages\assets\images\application\img-prod-brand-3.png" />
+    <Content Include="Admin\Pages\assets\images\application\img-prod-brand-4.png" />
+    <Content Include="Admin\Pages\assets\images\application\img-prod-brand-5.png" />
+    <Content Include="Admin\Pages\assets\images\application\img-profile-cover.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-soc-gal-1.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-soc-gal-2.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-soc-gal-3.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-soc-gal-4.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-soc-gal-5.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-soc-gal-6.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-soc-gal-7.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-soc-gal-8.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-soc-gal-9.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-story-1.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-story-2.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-story-3.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-story-4.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-story-5.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-story-6.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-user-cover-1.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-user-cover-2.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-user-cover-3.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-user-cover-4.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-user-cover-5.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-user-cover-6.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-user-cover-7.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-user-cover-8.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\img-user-cover-9.jpg" />
+    <Content Include="Admin\Pages\assets\images\application\mastercard.png" />
+    <Content Include="Admin\Pages\assets\images\application\paypal.png" />
+    <Content Include="Admin\Pages\assets\images\application\visa.png" />
+    <Content Include="Admin\Pages\assets\images\authentication\img-auth-bg.jpg" />
+    <Content Include="Admin\Pages\assets\images\authentication\img-auth-code-varify.png" />
+    <Content Include="Admin\Pages\assets\images\authentication\img-auth-fporgot-password.png" />
+    <Content Include="Admin\Pages\assets\images\authentication\img-auth-login.png" />
+    <Content Include="Admin\Pages\assets\images\authentication\img-auth-register.png" />
+    <Content Include="Admin\Pages\assets\images\authentication\img-auth-reset-password.png" />
+    <Content Include="Admin\Pages\assets\images\favicon.svg" />
+    <Content Include="Admin\Pages\assets\images\gallery-grid\img-grd-gal-1.jpg" />
+    <Content Include="Admin\Pages\assets\images\gallery-grid\img-grd-gal-10.jpg" />
+    <Content Include="Admin\Pages\assets\images\gallery-grid\img-grd-gal-11.jpg" />
+    <Content Include="Admin\Pages\assets\images\gallery-grid\img-grd-gal-12.jpg" />
+    <Content Include="Admin\Pages\assets\images\gallery-grid\img-grd-gal-13.jpg" />
+    <Content Include="Admin\Pages\assets\images\gallery-grid\img-grd-gal-14.jpg" />
+    <Content Include="Admin\Pages\assets\images\gallery-grid\img-grd-gal-15.jpg" />
+    <Content Include="Admin\Pages\assets\images\gallery-grid\img-grd-gal-16.jpg" />
+    <Content Include="Admin\Pages\assets\images\gallery-grid\img-grd-gal-2.jpg" />
+    <Content Include="Admin\Pages\assets\images\gallery-grid\img-grd-gal-3.jpg" />
+    <Content Include="Admin\Pages\assets\images\gallery-grid\img-grd-gal-4.jpg" />
+    <Content Include="Admin\Pages\assets\images\gallery-grid\img-grd-gal-5.jpg" />
+    <Content Include="Admin\Pages\assets\images\gallery-grid\img-grd-gal-6.jpg" />
+    <Content Include="Admin\Pages\assets\images\gallery-grid\img-grd-gal-7.jpg" />
+    <Content Include="Admin\Pages\assets\images\gallery-grid\img-grd-gal-8.jpg" />
+    <Content Include="Admin\Pages\assets\images\gallery-grid\img-grd-gal-9.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\client-crystal-1.svg" />
+    <Content Include="Admin\Pages\assets\images\landing\client-eagames.svg" />
+    <Content Include="Admin\Pages\assets\images\landing\client-haswent-2.svg" />
+    <Content Include="Admin\Pages\assets\images\landing\client-vodafone.svg" />
+    <Content Include="Admin\Pages\assets\images\landing\header-main.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\img-counter-bg.svg" />
+    <Content Include="Admin\Pages\assets\images\landing\img-header-bg.svg" />
+    <Content Include="Admin\Pages\assets\images\landing\lay-2-column.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\lay-advanced.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\lay-big-compact.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\lay-detached.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\lay-extended.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\lay-moduler.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\lay-vertical-tab.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\lay-vertical.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-app-calendar.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-app-chat.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-app-ecommerce.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-app-gallery.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-app-inbox.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-app-invoice.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-app-social.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-figma.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-important-account-profile.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-important-auth-page.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-important-coming-soon.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-important-contact.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-important-data-table.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-important-error.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-important-form.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-important-widgets.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-important-wizard.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-layouts-compact.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-layouts-creative.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-layouts-horizontal.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-layouts-tab.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-layouts-vertical.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-page-dark.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-page-landing.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\preview-page-rtl.jpg" />
+    <Content Include="Admin\Pages\assets\images\landing\techcard-bs.svg" />
+    <Content Include="Admin\Pages\assets\images\landing\techcard-cakephp.svg" />
+    <Content Include="Admin\Pages\assets\images\landing\techcard-django.svg" />
+    <Content Include="Admin\Pages\assets\images\landing\techcard-figma.svg" />
+    <Content Include="Admin\Pages\assets\images\landing\techcard-laravel.svg" />
+    <Content Include="Admin\Pages\assets\images\landing\techcard-mvc5.svg" />
+    <Content Include="Admin\Pages\assets\images\landing\techcard-net.svg" />
+    <Content Include="Admin\Pages\assets\images\landing\techcard-node.svg" />
+    <Content Include="Admin\Pages\assets\images\landing\techcard-react.svg" />
+    <Content Include="Admin\Pages\assets\images\landing\techcard-vue.svg" />
+    <Content Include="Admin\Pages\assets\images\landing\widget-bg.png" />
+    <Content Include="Admin\Pages\assets\images\layout\nav-card-bg.svg" />
+    <Content Include="Admin\Pages\assets\images\light-box\l1.jpg" />
+    <Content Include="Admin\Pages\assets\images\light-box\l2.jpg" />
+    <Content Include="Admin\Pages\assets\images\light-box\l3.jpg" />
+    <Content Include="Admin\Pages\assets\images\light-box\l4.jpg" />
+    <Content Include="Admin\Pages\assets\images\light-box\l5.jpg" />
+    <Content Include="Admin\Pages\assets\images\light-box\l6.jpg" />
+    <Content Include="Admin\Pages\assets\images\light-box\sl1.jpg" />
+    <Content Include="Admin\Pages\assets\images\light-box\sl2.jpg" />
+    <Content Include="Admin\Pages\assets\images\light-box\sl3.jpg" />
+    <Content Include="Admin\Pages\assets\images\light-box\sl4.jpg" />
+    <Content Include="Admin\Pages\assets\images\light-box\sl5.jpg" />
+    <Content Include="Admin\Pages\assets\images\light-box\sl6.jpg" />
+    <Content Include="Admin\Pages\assets\images\logo-dark.svg" />
+    <Content Include="Admin\Pages\assets\images\logo-white.svg" />
+    <Content Include="Admin\Pages\assets\images\pages\img-connection-lost.png" />
+    <Content Include="Admin\Pages\assets\images\pages\img-error-404.png" />
+    <Content Include="Admin\Pages\assets\images\pages\img-gallery-1.jpg" />
+    <Content Include="Admin\Pages\assets\images\pages\img-gallery-2.jpg" />
+    <Content Include="Admin\Pages\assets\images\pages\img-gallery-3.jpg" />
+    <Content Include="Admin\Pages\assets\images\pages\img-gallery-4.jpg" />
+    <Content Include="Admin\Pages\assets\images\pages\img-gallery-5.jpg" />
+    <Content Include="Admin\Pages\assets\images\pages\img-gallery-6.jpg" />
+    <Content Include="Admin\Pages\assets\images\pages\img-gallery-7.jpg" />
+    <Content Include="Admin\Pages\assets\images\pages\img-gallery-8.jpg" />
+    <Content Include="Admin\Pages\assets\images\pages\img-gallery-9.jpg" />
+    <Content Include="Admin\Pages\assets\images\pages\img-soon.png" />
+    <Content Include="Admin\Pages\assets\images\pages\img-under-maintenance.png" />
+    <Content Include="Admin\Pages\assets\images\slider\img-slide-1.jpg" />
+    <Content Include="Admin\Pages\assets\images\slider\img-slide-2.jpg" />
+    <Content Include="Admin\Pages\assets\images\slider\img-slide-3.jpg" />
+    <Content Include="Admin\Pages\assets\images\slider\img-slide-4.jpg" />
+    <Content Include="Admin\Pages\assets\images\slider\img-slide-5.jpg" />
+    <Content Include="Admin\Pages\assets\images\slider\img-slide-7.jpg" />
+    <Content Include="Admin\Pages\assets\images\user\avatar-1.jpg" />
+    <Content Include="Admin\Pages\assets\images\user\avatar-10.jpg" />
+    <Content Include="Admin\Pages\assets\images\user\avatar-2.jpg" />
+    <Content Include="Admin\Pages\assets\images\user\avatar-3.jpg" />
+    <Content Include="Admin\Pages\assets\images\user\avatar-4.jpg" />
+    <Content Include="Admin\Pages\assets\images\user\avatar-5.jpg" />
+    <Content Include="Admin\Pages\assets\images\user\avatar-6.jpg" />
+    <Content Include="Admin\Pages\assets\images\user\avatar-7.jpg" />
+    <Content Include="Admin\Pages\assets\images\user\avatar-8.jpg" />
+    <Content Include="Admin\Pages\assets\images\user\avatar-9.jpg" />
+    <Content Include="Admin\Pages\assets\images\widget\AUSTRALIA.jpg" />
+    <Content Include="Admin\Pages\assets\images\widget\BRAZIL.jpg" />
+    <Content Include="Admin\Pages\assets\images\widget\GERMANY.jpg" />
+    <Content Include="Admin\Pages\assets\images\widget\img-acitivity-3.svg" />
+    <Content Include="Admin\Pages\assets\images\widget\img-card-1.png" />
+    <Content Include="Admin\Pages\assets\images\widget\img-card-2.png" />
+    <Content Include="Admin\Pages\assets\images\widget\img-card-bg.svg" />
+    <Content Include="Admin\Pages\assets\images\widget\img-card-master.svg" />
+    <Content Include="Admin\Pages\assets\images\widget\img-earning-bg.svg" />
+    <Content Include="Admin\Pages\assets\images\widget\img-facebook.svg" />
+    <Content Include="Admin\Pages\assets\images\widget\img-food.png" />
+    <Content Include="Admin\Pages\assets\images\widget\img-google.svg" />
+    <Content Include="Admin\Pages\assets\images\widget\img-helth.png" />
+    <Content Include="Admin\Pages\assets\images\widget\img-shoping.png" />
+    <Content Include="Admin\Pages\assets\images\widget\img-status-1.svg" />
+    <Content Include="Admin\Pages\assets\images\widget\img-status-2.svg" />
+    <Content Include="Admin\Pages\assets\images\widget\img-status-3.svg" />
+    <Content Include="Admin\Pages\assets\images\widget\img-status-4.svg" />
+    <Content Include="Admin\Pages\assets\images\widget\img-status-5.svg" />
+    <Content Include="Admin\Pages\assets\images\widget\img-status-6.svg" />
+    <Content Include="Admin\Pages\assets\images\widget\img-status-7.svg" />
+    <Content Include="Admin\Pages\assets\images\widget\img-status-8.svg" />
+    <Content Include="Admin\Pages\assets\images\widget\img-status-9.svg" />
+    <Content Include="Admin\Pages\assets\images\widget\img-travel.png" />
+    <Content Include="Admin\Pages\assets\images\widget\img-twitter.svg" />
+    <Content Include="Admin\Pages\assets\images\widget\img-visitor.png" />
+    <Content Include="Admin\Pages\assets\images\widget\UK.jpg" />
+    <Content Include="Admin\Pages\assets\images\widget\USA.jpg" />
+    <Content Include="Admin\Pages\assets\js\component.js" />
+    <Content Include="Admin\Pages\assets\js\fonts\custom-font.js" />
+    <Content Include="Admin\Pages\assets\js\layout-collapse.js" />
+    <Content Include="Admin\Pages\assets\js\layout-compact.js" />
+    <Content Include="Admin\Pages\assets\js\layout-horizontal.js" />
+    <Content Include="Admin\Pages\assets\js\layout-tab.js" />
+    <Content Include="Admin\Pages\assets\js\pages\ac-alert.js" />
+    <Content Include="Admin\Pages\assets\js\pages\ac-datepicker.js" />
+    <Content Include="Admin\Pages\assets\js\pages\ac-notification.js" />
+    <Content Include="Admin\Pages\assets\js\pages\ac-rangeslider.js" />
+    <Content Include="Admin\Pages\assets\js\pages\ac-slider.js" />
+    <Content Include="Admin\Pages\assets\js\pages\ac-tour.js" />
+    <Content Include="Admin\Pages\assets\js\pages\ac-treeview.js" />
+    <Content Include="Admin\Pages\assets\js\pages\calendar.js" />
+    <Content Include="Admin\Pages\assets\js\pages\canada.js" />
+    <Content Include="Admin\Pages\assets\js\pages\chart-apex.js" />
+    <Content Include="Admin\Pages\assets\js\pages\course-dashboard.js" />
+    <Content Include="Admin\Pages\assets\js\pages\dashboard-default.js" />
+    <Content Include="Admin\Pages\assets\js\pages\dashboard-finance.js" />
+    <Content Include="Admin\Pages\assets\js\pages\dashboard-help.js" />
+    <Content Include="Admin\Pages\assets\js\pages\form-masking-custom.js" />
+    <Content Include="Admin\Pages\assets\js\pages\form-validation.js" />
+    <Content Include="Admin\Pages\assets\js\pages\invoice-dashboard.js" />
+    <Content Include="Admin\Pages\assets\js\pages\invoice-list.js" />
+    <Content Include="Admin\Pages\assets\js\pages\iraq.js" />
+    <Content Include="Admin\Pages\assets\js\pages\italy.js" />
+    <Content Include="Admin\Pages\assets\js\pages\map-vector.js" />
+    <Content Include="Admin\Pages\assets\js\pages\membership-dashboard.js" />
+    <Content Include="Admin\Pages\assets\js\pages\page-croper.js" />
+    <Content Include="Admin\Pages\assets\js\pages\russia.js" />
+    <Content Include="Admin\Pages\assets\js\pages\spain.js" />
+    <Content Include="Admin\Pages\assets\js\pages\us-aea-en.js" />
+    <Content Include="Admin\Pages\assets\js\pages\us-lcc-en.js" />
+    <Content Include="Admin\Pages\assets\js\pages\us-merc-en.js" />
+    <Content Include="Admin\Pages\assets\js\pages\us-mill-en.js" />
+    <Content Include="Admin\Pages\assets\js\pages\w-chart.js" />
+    <Content Include="Admin\Pages\assets\js\pcoded.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\apexcharts.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\autoFill.bootstrap5.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\bootstrap-slider.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\bootstrap-switch-button.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\bootstrap.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\bouncer.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\buttons.bootstrap5.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\buttons.colVis.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\buttons.html5.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\buttons.print.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\choices.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\ckeditor\balloon\ckeditor.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\ckeditor\classic\ckeditor.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\ckeditor\document\ckeditor.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\ckeditor\inline\ckeditor.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\clipboard.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\croppr.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\dataTables.autoFill.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\dataTables.bootstrap5.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\dataTables.buttons.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\dataTables.colReorder.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\dataTables.fixedColumns.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\dataTables.fixedHeader.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\dataTables.keyTable.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\dataTables.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\dataTables.responsive.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\dataTables.rowReorder.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\dataTables.select.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\datepicker-full.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\dropzone-amd-module.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\feather.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\flatpickr.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\imask.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\index.global.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\index.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\intro.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\isotope.pkgd.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\jsvectormap.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\jszip.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\keyTable.bootstrap5.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\notifier.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\nouislider.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\pdfmake.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\peity-vanilla.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\popper.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\prism.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\quill.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\responsive.bootstrap5.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\scroller.bootstrap5.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\simple-datatables.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\simplebar.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\simplemde.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\star-rating.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\sweetalert2.all.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\swiper-bundle.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\tiny-slider.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\tinymce\tinymce.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\type-ahead.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\uppy.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\vanillatree.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\vfs_fonts.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\wizard.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\wNumb.min.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\world-merc.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\world.js" />
+    <Content Include="Admin\Pages\assets\js\plugins\wow.min.js" />
+    <Content Include="Admin\Pages\Client\index.aspx" />
+    <Content Include="App_Data\Travel.mdf" />
+    <Content Include="App_Data\Travel_log.ldf">
+      <DependentUpon>Travel.mdf</DependentUpon>
+    </Content>
+    <Content Include="Pages\about.aspx" />
+    <Content Include="Pages\assets\css\bootstrap-5.3.0.min.css" />
+    <Content Include="Pages\assets\css\images\ui-icons_444444_256x240.html" />
+    <Content Include="Pages\assets\css\images\ui-icons_555555_256x240.html" />
+    <Content Include="Pages\assets\css\images\ui-icons_777620_256x240.html" />
+    <Content Include="Pages\assets\css\images\ui-icons_777777_256x240.html" />
+    <Content Include="Pages\assets\css\images\ui-icons_cc0000_256x240.html" />
+    <Content Include="Pages\assets\css\images\ui-icons_ffffff_256x240.html" />
+    <Content Include="Pages\assets\css\main-style.css" />
+    <Content Include="Pages\assets\css\plugin.css" />
+    <Content Include="Pages\assets\css\remixicon.css" />
+    <Content Include="Pages\assets\fonts\index-2.html" />
+    <Content Include="Pages\assets\fonts\index.html" />
+    <Content Include="Pages\assets\fonts\remixicon.css" />
+    <Content Include="Pages\assets\fonts\remixicon.svg" />
+    <Content Include="Pages\assets\fonts\remixicone85e.svg" />
+    <Content Include="Pages\assets\fonts\unicode.html" />
+    <Content Include="Pages\assets\images\auth-bg.html" />
+    <Content Include="Pages\assets\images\brand\brand-1.jpeg" />
+    <Content Include="Pages\assets\images\brand\brand-2.jpg" />
+    <Content Include="Pages\assets\images\brand\brand-3.jpg" />
+    <Content Include="Pages\assets\images\brand\brand-4.png" />
+    <Content Include="Pages\assets\images\brand\brand-5.png" />
+    <Content Include="Pages\assets\images\destination\destination-001.jpg" />
+    <Content Include="Pages\assets\images\destination\destination-01.png" />
+    <Content Include="Pages\assets\images\destination\destination-02.png" />
+    <Content Include="Pages\assets\images\destination\destination-1.png" />
+    <Content Include="Pages\assets\images\destination\destination-2.png" />
+    <Content Include="Pages\assets\images\destination\destination-3.png" />
+    <Content Include="Pages\assets\images\destination\destination-4.png" />
+    <Content Include="Pages\assets\images\destination\destination-5.png" />
+    <Content Include="Pages\assets\images\destination\destination-6.png" />
+    <Content Include="Pages\assets\images\destination\destination-7.png" />
+    <Content Include="Pages\assets\images\destination\destination-8.png" />
+    <Content Include="Pages\assets\images\destination\destination-9.png" />
+    <Content Include="Pages\assets\images\destination\destination-shape-three.png" />
+    <Content Include="Pages\assets\images\destination\destination-shape-two.png" />
+    <Content Include="Pages\assets\images\destination\destination-shape.png" />
+    <Content Include="Pages\assets\images\destination\details.png" />
+    <Content Include="Pages\assets\images\gallery\about-banner-2.png" />
+    <Content Include="Pages\assets\images\gallery\about-banner-3.png" />
+    <Content Include="Pages\assets\images\gallery\about-banner-4.png" />
+    <Content Include="Pages\assets\images\gallery\about-banner-three.png" />
+    <Content Include="Pages\assets\images\gallery\about-curve-banner.png" />
+    <Content Include="Pages\assets\images\gallery\about.png" />
+    <Content Include="Pages\assets\images\gallery\contact-bg.png" />
+    <Content Include="Pages\assets\images\gallery\faq.jpg" />
+    <Content Include="Pages\assets\images\gallery\feature-bg.png" />
+    <Content Include="Pages\assets\images\gallery\hiking.png" />
+    <Content Include="Pages\assets\images\gallery\music.png" />
+    <Content Include="Pages\assets\images\gallery\offer-1.png" />
+    <Content Include="Pages\assets\images\gallery\offer-2.png" />
+    <Content Include="Pages\assets\images\gallery\offercard-1.jpg" />
+    <Content Include="Pages\assets\images\gallery\offercard-2.jpg" />
+    <Content Include="Pages\assets\images\gallery\offercard-3.jpg" />
+    <Content Include="Pages\assets\images\gallery\paragliding.png" />
+    <Content Include="Pages\assets\images\gallery\promotion-banner.png" />
+    <Content Include="Pages\assets\images\gallery\promotion.png" />
+    <Content Include="Pages\assets\images\gallery\search-img-1.jpeg" />
+    <Content Include="Pages\assets\images\gallery\search-img-2.jpeg" />
+    <Content Include="Pages\assets\images\gallery\search-img-3.jpeg" />
+    <Content Include="Pages\assets\images\gallery\special-offer.png" />
+    <Content Include="Pages\assets\images\gallery\sports.png" />
+    <Content Include="Pages\assets\images\gallery\templates1.html" />
+    <Content Include="Pages\assets\images\gallery\tour-details-banner-three.png" />
+    <Content Include="Pages\assets\images\gallery\tour-details-banner-two.png" />
+    <Content Include="Pages\assets\images\gallery\tour-details-banner.png" />
+    <Content Include="Pages\assets\images\hero.html" />
+    <Content Include="Pages\assets\images\hero\hero-banner-1.png" />
+    <Content Include="Pages\assets\images\hero\hero-bg-1.png" />
+    <Content Include="Pages\assets\images\hero\hero-bg-two-shape.png" />
+    <Content Include="Pages\assets\images\hero\hero-bg-two.png" />
+    <Content Include="Pages\assets\images\hero\hero-slider1.mp4" />
+    <Content Include="Pages\assets\images\hero\hero-slider2.mp4" />
+    <Content Include="Pages\assets\images\hero\hero-three-banner.png" />
+    <Content Include="Pages\assets\images\hero\shape-1.png" />
+    <Content Include="Pages\assets\images\hero\testimonial-three-banner.png" />
+    <Content Include="Pages\assets\images\hero\user-1.jpeg" />
+    <Content Include="Pages\assets\images\hero\user-2.png" />
+    <Content Include="Pages\assets\images\hero\user-3.png" />
+    <Content Include="Pages\assets\images\hero\user-4.jpeg" />
+    <Content Include="Pages\assets\images\icon\about-shape.png" />
+    <Content Include="Pages\assets\images\icon\banner-white.svg" />
+    <Content Include="Pages\assets\images\icon\bg-shape-2.png" />
+    <Content Include="Pages\assets\images\icon\bg-shape-3.png" />
+    <Content Include="Pages\assets\images\icon\bg-shape.png" />
+    <Content Include="Pages\assets\images\icon\close-cursor.png" />
+    <Content Include="Pages\assets\images\icon\explore-1.svg" />
+    <Content Include="Pages\assets\images\icon\explore-2.svg" />
+    <Content Include="Pages\assets\images\icon\explore-3.svg" />
+    <Content Include="Pages\assets\images\icon\explore-4.svg" />
+    <Content Include="Pages\assets\images\icon\explore-5.svg" />
+    <Content Include="Pages\assets\images\icon\favicon.png" />
+    <Content Include="Pages\assets\images\icon\feature-shape.png" />
+    <Content Include="Pages\assets\images\icon\flight-bg-1.png" />
+    <Content Include="Pages\assets\images\icon\google-icon.png" />
+    <Content Include="Pages\assets\images\icon\graphic.png" />
+    <Content Include="Pages\assets\images\icon\hand.png" />
+    <Content Include="Pages\assets\images\icon\payment-method1.png" />
+    <Content Include="Pages\assets\images\icon\payment-method10.png" />
+    <Content Include="Pages\assets\images\icon\payment-method12.png" />
+    <Content Include="Pages\assets\images\icon\payment-method13.png" />
+    <Content Include="Pages\assets\images\icon\payment-method15.png" />
+    <Content Include="Pages\assets\images\icon\payment-method16.png" />
+    <Content Include="Pages\assets\images\icon\payment-method2.png" />
+    <Content Include="Pages\assets\images\icon\payment-method3.png" />
+    <Content Include="Pages\assets\images\icon\payment-method4.png" />
+    <Content Include="Pages\assets\images\icon\payment-method6.png" />
+    <Content Include="Pages\assets\images\icon\payment-method7.png" />
+    <Content Include="Pages\assets\images\icon\payment-method8.png" />
+    <Content Include="Pages\assets\images\icon\shape.png" />
+    <Content Include="Pages\assets\images\icon\tick.png" />
+    <Content Include="Pages\assets\images\logo\logo.png" />
+    <Content Include="Pages\assets\images\news\banner-1.png" />
+    <Content Include="Pages\assets\images\news\banner-2.png" />
+    <Content Include="Pages\assets\images\news\news-1.jpeg" />
+    <Content Include="Pages\assets\images\news\news-10.png" />
+    <Content Include="Pages\assets\images\news\news-11.png" />
+    <Content Include="Pages\assets\images\news\news-12.png" />
+    <Content Include="Pages\assets\images\news\news-2.jpeg" />
+    <Content Include="Pages\assets\images\news\news-3.jpeg" />
+    <Content Include="Pages\assets\images\news\news-4.png" />
+    <Content Include="Pages\assets\images\news\news-5.png" />
+    <Content Include="Pages\assets\images\news\news-6.png" />
+    <Content Include="Pages\assets\images\news\news-7.png" />
+    <Content Include="Pages\assets\images\news\news-8.png" />
+    <Content Include="Pages\assets\images\news\news-9.png" />
+    <Content Include="Pages\assets\images\news\news-banner.png" />
+    <Content Include="Pages\assets\images\news\news-user-1.png" />
+    <Content Include="Pages\assets\images\news\news-user-2.png" />
+    <Content Include="Pages\assets\images\news\news-user-3.png" />
+    <Content Include="Pages\assets\images\package\package-10.jpg" />
+    <Content Include="Pages\assets\images\package\package-11.jpg" />
+    <Content Include="Pages\assets\images\package\package-12.jpg" />
+    <Content Include="Pages\assets\images\package\package-13.jpg" />
+    <Content Include="Pages\assets\images\package\package-14.jpg" />
+    <Content Include="Pages\assets\images\package\package-15.jpg" />
+    <Content Include="Pages\assets\images\package\package-16.jpg" />
+    <Content Include="Pages\assets\images\package\package-17.jpg" />
+    <Content Include="Pages\assets\images\package\package-18.jpg" />
+    <Content Include="Pages\assets\images\package\package-19.jpg" />
+    <Content Include="Pages\assets\images\package\package-2.png" />
+    <Content Include="Pages\assets\images\package\package-20.jpg" />
+    <Content Include="Pages\assets\images\package\package-3.png" />
+    <Content Include="Pages\assets\images\package\package-4.png" />
+    <Content Include="Pages\assets\images\package\package-5.jpg" />
+    <Content Include="Pages\assets\images\package\package-6.jpg" />
+    <Content Include="Pages\assets\images\package\package-7.jpg" />
+    <Content Include="Pages\assets\images\package\package-8.jpg" />
+    <Content Include="Pages\assets\images\package\package-9.jpg" />
+    <Content Include="Pages\assets\images\portfolio\feedback-1.html" />
+    <Content Include="Pages\assets\images\portfolio\feedback-2.html" />
+    <Content Include="Pages\assets\images\portfolio\feedback-4.html" />
+    <Content Include="Pages\assets\images\portfolio\feedback-5.html" />
+    <Content Include="Pages\assets\images\testimonial\testimonial-1.jpeg" />
+    <Content Include="Pages\assets\images\testimonial\testimonial-banner.png" />
+    <Content Include="Pages\assets\images\videos\travel1.mp4" />
+    <Content Include="Pages\assets\images\videos\travel11.html" />
+    <Content Include="Pages\assets\images\videos\travel4.mp4" />
+    <Content Include="Pages\assets\js\bootstrap-5.3.0.min.js" />
+    <Content Include="Pages\assets\js\jquery-3.7.0.min.js" />
+    <Content Include="Pages\assets\js\main.js" />
+    <Content Include="Pages\assets\js\plugin.js" />
+    <Content Include="Pages\assets\js\popper.min.js" />
+    <Content Include="Pages\contact.aspx" />
+    <Content Include="Pages\destinations.aspx" />
+    <Content Include="Pages\index.aspx" />
+    <Content Include="Pages\login.aspx" />
+    <Content Include="Pages\news.aspx" />
+    <Content Include="Pages\payment.aspx" />
+    <Content Include="Pages\register.aspx" />
+    <Content Include="Pages\singledestination.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Pages\Admin\add.aspx.cs">
+      <DependentUpon>add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pages\Admin\add.aspx.designer.cs">
+      <DependentUpon>add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pages\Admin\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pages\Admin\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pages\Admin\update.aspx.cs">
+      <DependentUpon>update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pages\Admin\update.aspx.designer.cs">
+      <DependentUpon>update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pages\Client\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pages\Client\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pages\main.Master.cs">
+      <DependentUpon>main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pages\main.Master.designer.cs">
+      <DependentUpon>main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\destinations.aspx.cs">
+      <DependentUpon>destinations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\destinations.aspx.designer.cs">
+      <DependentUpon>destinations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\main.Master.cs">
+      <DependentUpon>main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\main.Master.designer.cs">
+      <DependentUpon>main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\news.aspx.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\news.aspx.designer.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\payment.aspx.cs">
+      <DependentUpon>payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\payment.aspx.designer.cs">
+      <DependentUpon>payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\singledestination.aspx.cs">
+      <DependentUpon>singledestination.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\singledestination.aspx.designer.cs">
+      <DependentUpon>singledestination.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="utils\service.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Pages\assets\fonts\feather\feathere8ab.eot" />
+    <Content Include="Admin\Pages\assets\fonts\feather\feathere8ab.ttf" />
+    <Content Include="Admin\Pages\assets\fonts\feather\feathere8ab.woff" />
+    <Content Include="Admin\Pages\assets\fonts\fontawesome\fa-brands-400.eot" />
+    <Content Include="Admin\Pages\assets\fonts\fontawesome\fa-brands-400.ttf" />
+    <Content Include="Admin\Pages\assets\fonts\fontawesome\fa-brands-400.woff" />
+    <Content Include="Admin\Pages\assets\fonts\fontawesome\fa-brands-400d41d.eot" />
+    <Content Include="Admin\Pages\assets\fonts\fontawesome\fa-regular-400.eot" />
+    <Content Include="Admin\Pages\assets\fonts\fontawesome\fa-regular-400.ttf" />
+    <Content Include="Admin\Pages\assets\fonts\fontawesome\fa-regular-400.woff" />
+    <Content Include="Admin\Pages\assets\fonts\fontawesome\fa-regular-400d41d.eot" />
+    <Content Include="Admin\Pages\assets\fonts\fontawesome\fa-solid-900.eot" />
+    <Content Include="Admin\Pages\assets\fonts\fontawesome\fa-solid-900.ttf" />
+    <Content Include="Admin\Pages\assets\fonts\fontawesome\fa-solid-900.woff" />
+    <Content Include="Admin\Pages\assets\fonts\fontawesome\fa-solid-900d41d.eot" />
+    <Content Include="Admin\Pages\assets\fonts\phosphor\duotone\Phosphor-Duotone.ttf" />
+    <Content Include="Admin\Pages\assets\fonts\phosphor\duotone\Phosphor-Duotone.woff" />
+    <Content Include="Admin\Pages\assets\fonts\tabler\tabler-icons.eot" />
+    <Content Include="Admin\Pages\assets\fonts\tabler\tabler-icons.ttf" />
+    <Content Include="Admin\Pages\assets\fonts\tabler\tabler-icons.woff" />
+    <Content Include="Admin\Pages\assets\fonts\tabler\tabler-iconsd41d.eot" />
+    <Content Include="Admin\Pages\assets\js\pages\chart-apex.js.z" />
+    <Content Include="Admin\Pages\assets\js\pages\iraq.js.z" />
+    <Content Include="Admin\Pages\assets\js\plugins\bootstrap-slider.min.js.z" />
+    <Content Include="Admin\Pages\assets\js\plugins\dataTables.buttons.min.js.z" />
+    <Content Include="Admin\Pages\assets\js\plugins\intro.min.js.z" />
+    <Content Include="Admin\Pages\assets\js\plugins\type-ahead.min.js.z" />
+    <Content Include="Admin\Pages\assets\js\plugins\vfs_fonts.js.z" />
+    <Content Include="Admin\Pages\main.Master" />
+    <None Include="packages.config" />
+    <Content Include="Pages\assets\fonts\remixicon.eot" />
+    <Content Include="Pages\assets\fonts\remixiconc831.ttf" />
+    <Content Include="Pages\assets\fonts\remixiconc831.woff" />
+    <Content Include="Pages\assets\fonts\remixiconc831.woff2" />
+    <Content Include="Pages\assets\fonts\remixicone85e.eot" />
+    <Content Include="Pages\assets\fonts\remixicone85e.ttf" />
+    <Content Include="Pages\assets\fonts\remixicone85e.woff" />
+    <Content Include="Pages\assets\fonts\remixicone85e.woff2" />
+    <Content Include="Pages\main.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54191</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54191/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
