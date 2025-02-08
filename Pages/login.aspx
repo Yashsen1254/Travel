@@ -88,33 +88,22 @@
                                 </a>
                             </div>
                             <!-- Form -->
-                            <form action="#" method="POST">
+                            <form runat="server">
                                 <div class="position-relative contact-form mb-24">
-                                    <label class="contact-label">Email </label>
-                                    <input class="form-control contact-input" type="text"
-                                        placeholder="Enter Your Email">
+                                    <label class="contact-label">Email</label>
+                                    <asp:TextBox ID="Email" runat="server" class="form-control contact-input" placeholder="Enter Your Email"></asp:TextBox>
                                 </div>
-
                                 <div class="contact-form mb-24">
                                     <div class="position-relative ">
                                         <div class="d-flex justify-content-between aligin-items-center">
                                             <label class="contact-label">Password</label>
-                                            <a href="forgot-pass.html"><span class="text-primary text-15"> Forgot
-                                                    password? </span></a>
                                         </div>
-                                        <input type="password" class="form-control contact-input password-input"
-                                            id="txtPasswordLogin" placeholder="Enter Password">
+                                    <asp:TextBox ID="Password" runat="server" class="form-control contact-input" placeholder="Enter Your Password"></asp:TextBox>
                                         <i class="toggle-password ri-eye-line"></i>
                                     </div>
                                 </div>
-
-                                <a href="javascript:void(0)" class="btn-primary-fill justify-content-center w-100">
-                                    <span class="d-flex justify-content-center gap-6">
-                                        <span>Login</span>
-                                    </span>
-                                </a>
+                                <asp:Button class="btn-primary-fill justify-content-center w-100" runat="server" Text="Login" OnClick="LoginClient"/>
                             </form>
-
                             <div class="login-footer">
                                 <div class="create-account">
                                     <p>
@@ -124,11 +113,6 @@
                                         </a>
                                     </p>
                                 </div>
-                                <a href="javascript:void(0)"
-                                    class="login-btn d-flex align-items-center justify-content-center gap-10">
-                                    <img src="assets/images/icon/google-icon.png" alt="img" class="m-0">
-                                    <span> login with Google</span>
-                                </a>
                             </div>
                         </div>
                     </div>

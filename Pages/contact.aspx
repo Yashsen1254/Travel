@@ -26,27 +26,23 @@
                         <div class="col-xl-7 col-lg-9">
                             <div class="contact-card">
                                 <h4 class="contact-heading">Feel Free to Write us Anytime</h4>
-                                <form method="post" class="contact-form">
+                                <form class="contact-form" runat="server">
                                     <div class="row g-4">
                                         <div class="col-sm-6">
-                                            <input class="custom-form" type="text" placeholder="Enter your name">
+                                            <asp:TextBox ID="Name" runat="server" class="custom-form" placeholder="Enter your Name"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-6">
-                                            <input class="custom-form" type="text" placeholder="Enter your email">
+                                            <asp:TextBox ID="Email" runat="server" class="custom-form" placeholder="Enter your Email"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-6">
-                                            <input class="custom-form" type="text" placeholder="Your Phone">
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <input class="custom-form" type="text" placeholder="Select subject">
+                                            <asp:TextBox ID="Phone" runat="server" class="custom-form" placeholder="Enter your Phone"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-12">
-                                            <textarea class="custom-form-textarea" id="exampleFormControlTextarea1"
-                                                rows="3" placeholder="Enter your message..."></textarea>
+                                            <asp:TextBox ID="Message" runat="server" class="custom-form" placeholder="Enter your Message.."></asp:TextBox>                                            
                                         </div>
                                     </div>
                                     <div class="mt-40">
-                                        <button type="submit" class="send-btn">Send Message</button>
+                                        <asp:Button runat="server" class="send-btn" Text="Button" OnClick="SendMessage" />
                                     </div>
                                 </form>
                             </div>

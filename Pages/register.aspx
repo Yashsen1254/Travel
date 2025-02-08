@@ -87,36 +87,26 @@
                                 </a>
                             </div>
                             <!-- Form -->
-                            <form action="#" method="POST">
+                            <form runat="server">
                                 <div class="contact-form mb-24">
                                     <label class="contact-label">Name </label>
-                                    <input class="form-control contact-input" type="text" placeholder="Enter Your Name">
+                                    <asp:TextBox ID="Name" runat="server" class="form-control contact-input" placeholder="Enter Your Name"></asp:TextBox>
                                 </div>
                                 <div class="contact-form mb-24">
-                                    <label class="contact-label">Email </label>
-                                    <input class="form-control contact-input" type="email" placeholder="Email">
+                                    <label class="contact-label">User Name</label>
+                                    <asp:TextBox ID="UserName" runat="server" class="form-control contact-input" placeholder="Enter Your User Name"></asp:TextBox>
                                 </div>
-
+                                <div class="contact-form mb-24">
+                                    <label class="contact-label">Email</label>
+                                    <asp:TextBox ID="Email" runat="server" class="form-control contact-input" placeholder="Enter Your Email"></asp:TextBox>
+                                </div>
                                 <!-- Password -->
                                 <div class="position-relative contact-form mb-24">
                                     <label class="contact-label">Enter Password</label>
-                                    <input type="password" class="form-control contact-input password-input"
-                                        id="txtPasswordLogin" placeholder="Enter Password">
+                                    <asp:TextBox ID="Password" runat="server" class="form-control contact-input" placeholder="Enter Your Password"></asp:TextBox>
                                     <i class="toggle-password ri-eye-line"></i>
                                 </div>
-                                <!-- Password -->
-                                <div class="position-relative contact-form mb-24">
-                                    <label class="contact-label">Confirm Password</label>
-                                    <input type="password" class="form-control contact-input password-input"
-                                        id="txtPasswordLogin2" placeholder="Confirm Password">
-                                    <i class="toggle-password ri-eye-line"></i>
-                                </div>
-
-                                <a href="javascript:void(0)" class="btn-primary-fill justify-content-center w-100">
-                                    <span class="d-flex justify-content-center gap-6">
-                                        <span >Register</span>
-                                    </span>
-                                </a>
+                                <asp:Button class="btn-primary-fill justify-content-center w-100" runat="server" Text="Button" OnClick="RegesterClient"/>
                             </form>
 
                             <div class="login-footer mb-20">

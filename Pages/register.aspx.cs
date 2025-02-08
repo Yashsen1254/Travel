@@ -13,5 +13,21 @@ namespace Travel.Pages
         {
 
         }
+
+        protected void RegesterClient(object sender, EventArgs e)
+        {
+            string sql = $"INSERT INTO Clients(Name, UserName, Email, Password) VALUES('{Name.Text}', '{UserName.Text}', '{Email.Text}', '{Password.Text}')";
+            int rows = utils.service.execute(sql);
+            if (rows > 0)
+                Response.Redirect("login.aspx");
+            else
+                ShowAlert("Error : Client Not Registered");
+        }
+
+        private void ShowAlert(string message)
+        {
+            string script = "alert('" + message + "');";
+            ClientScript.RegisterStartupScript(this.GetType(), "alert", script, true);
+        }
     }
 }
