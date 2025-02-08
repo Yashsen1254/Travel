@@ -14,7 +14,7 @@ namespace Travel.Admin.Pages.Admin
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Request.QueryString["Id"] != null)
-            {
+            {   
                 int Id = int.Parse(Request.QueryString["Id"]);
                 string sql = $"SELECT * FROM [Admins] WHERE Id = {Id}";
                 DataTable dt = utils.service.select(sql);
