@@ -13,12 +13,12 @@ namespace Travel.Admin.Pages.Client {
     public partial class index {
         
         /// <summary>
-        /// RepeaterAdmin control.
+        /// RepeaterClient control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater RepeaterAdmin;
+        protected global::System.Web.UI.WebControls.Repeater RepeaterClient;
     }
 }

@@ -29,7 +29,6 @@
           <!-- prettier-ignore -->
           <div class="col-md-10 col-xxl-9 mb-4">
             <div>
-              <a class="btn btn-sm btn-light-dark rounded-pill px-2"  href="add.aspx">Add Admin</a>
             </div>
           </div>
 
@@ -57,7 +56,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                        <asp:Repeater ID="RepeaterAdmin" runat="server">
+                        <asp:Repeater ID="RepeaterClient" runat="server">
                             <ItemTemplate>
                                 <tr>
                                     <td><%# Eval("Name") %></td>
@@ -75,8 +74,6 @@
                         <th>User Name</th>
                         <th>Email</th>
                         <th>Password</th>
-                        <th>Update</th>
-                        <th>Delete</th>
                       </tr>
                     </tfoot>
                   </table>
