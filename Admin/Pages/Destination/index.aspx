@@ -45,7 +45,7 @@
                     <div class="card product-card">
                       <div class="card-img-top">
                         <a href="ecom_product-details.html">
-                          <img src='<%# "~/uploads/" + Eval("ImageFileName") %>' alt="image" class="img-prod img-fluid" />
+                          <img src='<%# "/uploads/" + Eval("ImageFileName") %>' alt="image" class="img-prod img-fluid" />
                         </a>
                         <div class="card-body position-absolute end-0 top-0">
                           <div class="form-check prod-likes">
