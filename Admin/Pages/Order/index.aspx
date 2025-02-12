@@ -54,6 +54,7 @@
                         <th>Total Price</th>
                         <th>Total Person</th>
                         <th>Date</th>
+                        <th>Status</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -64,7 +65,10 @@
                                     <td><%# Eval("Email") %></td>
                                     <td><%# Eval("TotalPrice") %></td>
                                     <td><%# Eval("TotalPerson") %></td>                                    
-                                    <td><%# Eval("Date") %></td>                                    
+                                    <td><%# Eval("Date") %></td>
+                                    <td>
+                                        <asp:LinkButton runat="server" CommandArgument='<%# Eval("Id") %>' onClick="Received"><%# Eval("Status") %></asp:LinkButton>                                        
+                                    </td>
                                 </tr>
                             </ItemTemplate>
                         </asp:Repeater>
@@ -77,6 +81,7 @@
                         <th>Total Price</th>
                         <th>Total Person</th>
                         <th>Date</th>
+                        <th>Status</th>
                       </tr>
                     </tfoot>
                   </table>
