@@ -21,13 +21,28 @@ namespace Travel.Pages
                 RepeaterPayment.DataSource = dt;
                 RepeaterPayment.DataBind();
             }
+
+            if (Session["ClientId"] != null)
+            {
+                lblClientId.Text = "Client ID: " + Session["ClientId"].ToString();
+            }
+            else
+            {
+                lblClientId.Text = "Client ID not set in session.";
+            }
         }
 
         protected void Pay_Now(object sender, EventArgs e)
         {
-                int DestinationId = int.Parse(Request.QueryString["Id"]);
-                int ClientId = Convert.ToInt32(Session["ClientId"]);
-                string sql = $"INSERT INTO Order(ClientId, DestinationId, TotalPrice, Date, Name, Email, TotalPerson) VALUES ('{ClientID}', '{DestinationId}', '{}')"
+            int DestinationId = int.Parse(Request.QueryString["Id"]);
+            int ClientId = Convert.ToInt32(Session["ClientId"]);
+            string sql = $"INSERT INTO [Order] (ClientId, DestinationId, TotalPrice, Date, Name, Email, TotalPerson, Status) VALUES('{ClientId}', '{DestinationId}', '{TotalPrice.Text}', '{Date.Text}', '{Name.Text}', '{Email.Text}', '{TotalPerson.Text}', 'Pending')";
+            int rows = utils.service.execute(sql);
+
+            if (rows > 0)
+                Response.Redirect("index.aspx");
+            else
+                Response.Redirect("payment.aspx?Id=" + DestinationId);
         }
     }
 }

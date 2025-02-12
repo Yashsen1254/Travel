@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/main.Master" AutoEventWireup="true" CodeBehind="payment.aspx.cs" Inherits="Travel.Pages.payment" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/main.Master" AutoEventWireup="true" CodeBehind="payment.aspx.cs" Inherits="Travel.Pages.payment"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <main>
 		<!-- Breadcrumbs S t a r t -->
@@ -18,7 +18,6 @@
 
 		</section>
 		<!--/ End-of Breadcrumbs-->
-
 		<!-- Destination area S t a r t -->
         <asp:Repeater ID="RepeaterPayment" runat="server">
             <ItemTemplate>
@@ -44,6 +43,8 @@
 								</div>
 							</div>
 						</div>
+                        </ItemTemplate>
+        </asp:Repeater>
 						<div class="row g-4">
 							<div class="col-xl-8">
 								<!-- Included Exclude-->
@@ -79,6 +80,8 @@
 												<div class="col-lg-6">
 													<div class="contact-form mb-24">
 														<label class="contact-label">Name</label>
+                                                        <asp:Label ID="lblClientId" runat="server" ForeColor="Blue"></asp:Label>
+
                                                         <asp:TextBox ID="Name" runat="server" class="form-control contact-input"></asp:TextBox>
 													</div>
 												</div>
@@ -120,8 +123,7 @@
 				</div>
 			</div>
 		</section>
-            </ItemTemplate>
-        </asp:Repeater>
+            
 		
 		<!--/ End-of Destination -->
 	</main>

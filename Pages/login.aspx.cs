@@ -18,10 +18,11 @@ namespace Travel.Pages
 
         protected void LoginClient(object sender, EventArgs e)
         {
-            DataTable dt = utils.service.select($"SELECT Email, Password FROM Clients WHERE Email = '{Email.Text}' AND Password = '{Password.Text}'");
+            DataTable dt = utils.service.select($"SELECT Id, Email, Password FROM Clients WHERE Email = '{Email.Text}' AND Password = '{Password.Text}'");
             if (dt.Rows.Count != 0)
             {
-                Session["ClientId"] = "true";
+                int Clientid = Convert.ToInt32(dt.Rows[0]["Id"]);
+                Session["ClientId"] = Clientid;
                 Response.Redirect("index.aspx");
             }
         }
