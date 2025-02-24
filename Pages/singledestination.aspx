@@ -24,32 +24,7 @@
             <div class="tour-details-area">
                 <asp:Repeater ID="RepeaterSingle" runat="server">
                     <ItemTemplate>
-                        <div class="tour-details-banner">
-                    <div class="swiper tourSwiper-active">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="assets/images/gallery/tour-details-banner-three.png" alt="travello">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/images/gallery/tour-details-banner.png" alt="travello">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/images/gallery/tour-details-banner-two.png" alt="travello">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/images/gallery/tour-details-banner-three.png" alt="travello">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/images/gallery/tour-details-banner.png" alt="travello">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/images/gallery/tour-details-banner-two.png" alt="travello">
-                            </div>
-                        </div>
-                        <div class="swiper-button-next"><i class="ri-arrow-right-s-line"></i></div>
-                        <div class="swiper-button-prev"><i class="ri-arrow-left-s-line"></i></div>
-                    </div>
-                </div>
+                        <div class="tour-details-banner"></div>
                         <div class="tour-details-container">
                     <div class="container">
 
