@@ -8,14 +8,13 @@
             <div class="row align-items-center">
               <div class="col-md-12">
                 <ul class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="../dashboard/index.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="javascript: void(0)">DataTable</a></li>
-                  <li class="breadcrumb-item" aria-current="page">DataTable Styling</li>
+                  <li class="breadcrumb-item"><a href="../dashboard/index.html">Admin</a></li>
+                  <li class="breadcrumb-item"><a href="javascript: void(0)">Admin</a></li>
                 </ul>
               </div>
               <div class="col-md-12">
                 <div class="page-header-title">
-                  <h2 class="mb-0">DataTable Styling</h2>
+                  <h2 class="mb-0">Admin</h2>
                 </div>
               </div>
             </div>
@@ -29,7 +28,7 @@
           <!-- prettier-ignore -->
           <div class="col-md-10 col-xxl-9 mb-4">
             <div>
-              <a class="btn btn-sm btn-light-dark rounded-pill px-2"  href="add.aspx">Add Admin</a>
+              <a class="btn btn-primary"  href="add.aspx">Add</a>
             </div>
           </div>
 

@@ -8,14 +8,13 @@
             <div class="row align-items-center">
               <div class="col-md-12">
                 <ul class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="../dashboard/index.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="javascript: void(0)">Forms</a></li>
-                  <li class="breadcrumb-item" aria-current="page">Elements</li>
+                  <li class="breadcrumb-item"><a href="../dashboard/index.html">Admin</a></li>
+                  <li class="breadcrumb-item"><a href="javascript: void(0)">Category</a></li>
                 </ul>
               </div>
               <div class="col-md-12">
                 <div class="page-header-title">
-                  <h2 class="mb-0">Elements</h2>
+                  <h2 class="mb-0">Update Category</h2>
                 </div>
               </div>
             </div>
@@ -29,7 +28,6 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h5>Form controls</h5>
               </div>
               <div class="card-body">
                 <div class="row">
@@ -39,7 +37,7 @@
                         <label class="form-label" for="exampleInputEmail1">Name</label>
                           <asp:TextBox ID="UpdatedName" runat="server" type="text" class="form-control" placeholder="Enter Name"></asp:TextBox>
                       </div>
-                        <asp:Button ID="Button1" runat="server" Text="Button" class="btn btn-primary mb-4" OnClick="UpdateCategory" />
+                        <asp:Button ID="Button1" runat="server" Text="Update" class="btn btn-primary mb-4" OnClick="UpdateCategory" />
                     </form>
                   </div>
                 </div>
